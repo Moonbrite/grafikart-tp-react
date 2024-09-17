@@ -1,7 +1,6 @@
 import ProductCategoryRow from "@/app/productCategoryRow";
 
-function ProductTable({inputProduct, isCheckedProduct}) {
-
+export default function ProductTable({inputProduct, isCheckedProduct}) {
     return (
         <>
             <ProductCategoryRow
@@ -11,5 +10,3 @@ function ProductTable({inputProduct, isCheckedProduct}) {
         </>
     );
 }
-
-export default ProductTable;

@@ -1,4 +1,4 @@
-function Checkbox({checked,onChecked}) {
+function Checkbox({checked,onChecked,label}) {
     return (
         <>
             <div className="flex gap-3.5">
@@ -7,7 +7,7 @@ function Checkbox({checked,onChecked}) {
                     type="checkbox"
                     checked={checked}
                 />
-                <label>Montre uniquement les produit en stock</label>
+                <label>{label}</label>
             </div>
         </>
     );

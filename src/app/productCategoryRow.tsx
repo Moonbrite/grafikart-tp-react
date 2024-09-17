@@ -1,7 +1,6 @@
 import ProductRow from "@/app/productRow";
 
-function ProductCategoryRow({inputProduct, isCheckedProduct}){
-
+export default function ProductCategoryRow({inputProduct, isCheckedProduct}){
     const PRODUCTS = [
         {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
         {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
@@ -10,9 +9,7 @@ function ProductCategoryRow({inputProduct, isCheckedProduct}){
         {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},
         {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
     ]
-
     const categories = [...new Set(PRODUCTS.map(product => product.category))];
-
     return (
         <>
             {categories.map(category => (
@@ -27,5 +24,3 @@ function ProductCategoryRow({inputProduct, isCheckedProduct}){
         </>
     );
 }
-
-export default ProductCategoryRow;
