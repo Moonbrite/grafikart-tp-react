@@ -1,6 +1,6 @@
 import ProductRow from "@/app/productRow";
 
-export default function ProductCategoryRow({inputProduct, isCheckedProduct}){
+export default function ProductCategoryRow({inputProduct, isCheckedProduct,inputPrice}){
     const PRODUCTS = [
         {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
         {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
@@ -15,6 +15,7 @@ export default function ProductCategoryRow({inputProduct, isCheckedProduct}){
             {categories.map(category => (
                 <div key={category}>
                     <ProductRow
+                        inputPrice={inputPrice}
                         isCheckedProduct={isCheckedProduct}
                         inputProduct={inputProduct}
                         products={PRODUCTS.filter(product => product.category === category)}

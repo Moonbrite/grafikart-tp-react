@@ -1,8 +1,13 @@
 "use client"
 import {Input} from '@mui/base/Input';
 
-
-export default function InputTuto({value,placeholder,onChangeProduct}) {
+interface InputTutoProps {
+    type: string;
+    value: string;
+    placeholder: string;
+    onChangeProduct: (value: string) => void;
+}
+export default function InputTuto({value,placeholder,type,onChangeProduct}: InputTutoProps) {
     return (
         <>
             <Input
@@ -14,6 +19,7 @@ export default function InputTuto({value,placeholder,onChangeProduct}) {
                 }}
                 placeholder={placeholder}
                 value={value}
+                type={type}
                 onChange={(e) => onChangeProduct(e.target.value)}
             />
         </>
